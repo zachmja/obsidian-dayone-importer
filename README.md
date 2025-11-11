@@ -1,5 +1,7 @@
 # Day One Importer for Obsidian
 
+Note: this was 100% vibe-coded.
+
 An Obsidian plugin to import and convert Day One journal exports to Markdown files.
 
 ## Features
