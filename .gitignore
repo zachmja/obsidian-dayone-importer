@@ -1,0 +1,29 @@
+# Test data - DO NOT COMMIT PERSONAL JOURNALS
+Timeline_test.json
+*_test.json
+test_*.json
+*.json
+!manifest.json
+!package.json
+!tsconfig.json
+!versions.json
+
+# Build output
+main.js
+main.js.map
+*.js.map
+
+# Dependencies
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+desktop.ini
