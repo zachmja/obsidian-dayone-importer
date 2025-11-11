@@ -116,31 +116,11 @@ MIT License - Free and Open Source Software (FOSS)
 
 All processing happens locally in your Obsidian vault. No data is sent to external servers.
 
-## Credits
-
-Inspired by other Day One converters in the Obsidian community.
-
-## Support
-3. **Analysis** - Understand your journaling patterns and habits
-4. **Publishing** - Convert entries to a readable blog format
-5. **Data Science** - Analyze sentiment, locations, weather patterns
-6. **Scrapbooking** - Extract photos and create physical albums
-
 ## Requirements
 
 - Python 3.6 or higher
-- Standard library only (no external dependencies!)
+- Standard library only (no external dependencies)
 
 ## License
 
 Free to use and modify for personal and commercial purposes.
-
-## Support
-
-Your journal data is private and processed locally. No data is sent to external servers.
-
-For issues or questions, feel free to modify the code to suit your needs!
-
----
-
-**Happy Journaling! 📔✨**
