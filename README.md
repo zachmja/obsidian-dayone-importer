@@ -1,4 +1,4 @@
-# Day One Importer for Obsidian
+# Platano Importer for Obsidian
 
 Note: this was 100% vibe-coded.
 
@@ -8,42 +8,48 @@ An Obsidian plugin to import and convert Day One journal exports to Markdown fil
 
 - 📝 **Complete Journal Import** - Import all Day One entries with full metadata
 - 📊 **Frontmatter Support** - Dates, locations, weather, tags, and custom metadata
-- 📸 **Media Handling** - References to photos, audio, and videos
+- 📸 **Media Handling** - Automatically imports photos, audio, and videos
 - ⚙️ **Customizable** - Configure import folder, filename format, and metadata options
 - 🔒 **Privacy First** - All processing happens locally in Obsidian
 - 🎯 **Clean Output** - Beautiful, readable markdown files
 
 ## Installation
 
-### From GitHub (Manual)
-1. Download the latest release from GitHub
-2. Extract the files to `{VaultFolder}/.obsidian/plugins/dayone-importer/`
-3. Reload Obsidian
-4. Enable the plugin in Settings → Community Plugins
+### Easy Install (Recommended)
 
-### Build from Source
+1. Clone or download this repository.
+2. Open a terminal in the project folder.
+3. Run the installation script:
 
 ```bash
-git clone https://github.com/yourusername/dayone-importer.git
-cd dayone-importer
 npm install
 npm run build
+npm run install-plugin
 ```
+
+The script will ask for your Obsidian vault's plugin directory (e.g., `/Users/you/Vault/.obsidian/plugins/platano-importer`) and copy the necessary files for you.
+
+### Manual Install
+
+1. Download the latest release.
+2. Create a folder named `platano-importer` in your vault's `.obsidian/plugins/` directory.
+3. Copy `main.js` and `manifest.json` into that folder.
+4. Reload Obsidian.
+5. Enable "Platano Importer" in Settings → Community Plugins.
 
 ## Usage
 
 1. **Export from Day One**
    - In Day One: File → Export → JSON
-   - Save the JSON file
+   - **Important:** Keep the `photos`, `audio`, and `video` folders in the same directory as your JSON file.
 
 2. **Import to Obsidian**
-   - Copy your JSON file into your Obsidian vault
-   - Click the import icon in the ribbon, or
-   - Use command palette: "Import Day One JSON"
-   - Plugin will create markdown files in your designated folder
+   - Click the "Import Day One Journal (Platano)" icon in the ribbon.
+   - Select your `Journal.json` file from the export folder.
+   - The plugin will import entries and copy media files to your vault.
 
 3. **Configure Settings**
-   - Go to Settings → Day One Importer
+   - Go to Settings → Platano Importer Settings
    - Set import folder, filename format, and metadata options
 
 ## Settings
@@ -75,25 +81,9 @@ tags: [travel, outdoor]
 Your journal entry text here...
 
 ## Photos
-![Photo 1](ABC123.jpg)
-![Photo 2](DEF456.jpg)
+![Photo 1](attachments/ABC123.jpg)
+![Photo 2](attachments/DEF456.jpg)
 ```
-
-## Supported Features
-
-- ✅ Text entries
-- ✅ Rich text formatting
-- ✅ Date-based or UUID filenames
-- ✅ Starred entries
-- ✅ Pinned entries
-- ✅ All-day events
-- ✅ Location (name & coordinates)
-- ✅ Weather data
-- ✅ Tags
-- ✅ Photo references
-- ✅ Audio references
-- ✅ Video references
-- ✅ Failed import reporting
 
 ## Development
 
@@ -116,11 +106,3 @@ MIT License - Free and Open Source Software (FOSS)
 
 All processing happens locally in your Obsidian vault. No data is sent to external servers.
 
-## Requirements
-
-- Python 3.6 or higher
-- Standard library only (no external dependencies)
-
-## License
-
-Free to use and modify for personal and commercial purposes.

@@ -1,0 +1,48 @@
+{
+    "metadata": {
+        "version": "1.0"
+    },
+    "entries": [
+        {
+            "uuid": "E1",
+            "text": "This is a simple test entry.",
+            "creationDate": "2023-10-27T10:00:00Z",
+            "modifiedDate": "2023-10-27T10:00:00Z",
+            "timeZone": "UTC",
+            "starred": false,
+            "richText": "{\"contents\":[{\"text\":\"This is a simple test entry.\"}]}"
+        },
+        {
+            "uuid": "E2",
+            "text": "Entry with tags and location.",
+            "creationDate": "2023-10-28T14:30:00Z",
+            "tags": [
+                "test",
+                "dayone"
+            ],
+            "location": {
+                "placeName": "Central Park",
+                "localityName": "New York",
+                "country": "United States",
+                "latitude": 40.785091,
+                "longitude": -73.968285
+            },
+            "weather": {
+                "temperatureCelsius": 15,
+                "weatherCode": "sunny"
+            }
+        },
+        {
+            "uuid": "E3",
+            "text": "Entry with a photo.\n\n",
+            "creationDate": "2023-10-29T09:15:00Z",
+            "photos": [
+                {
+                    "identifier": "photo1",
+                    "type": "jpeg",
+                    "md5": "fake-md5"
+                }
+            ]
+        }
+    ]
+}
