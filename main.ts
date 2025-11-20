@@ -1,4 +1,4 @@
-import { App, Plugin, PluginSettingTab, Setting, Notice, TFile, Modal } from 'obsidian';
+import { App, Plugin, PluginSettingTab, Setting, Notice, Modal } from 'obsidian';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -69,8 +69,16 @@ export default class DayOneImporter extends Plugin {
 		let successCount = 0;
 		let skippedCount = 0;
 		const failedEntries: any[] = [];
+		const totalEntries = entries.length;
 
-		for (const entry of entries) {
+		for (let i = 0; i < entries.length; i++) {
+			const entry = entries[i];
+
+			// Show progress every 10 entries, or on the last entry
+			if ((i + 1) % 10 === 0 || i === entries.length - 1) {
+				new Notice(`Processing entry ${i + 1}/${totalEntries}...`, 2000);
+			}
+
 			try {
 				const isCreated = await this.createNoteFromEntry(entry, folder, basePath, fileMap);
 				if (isCreated) {
@@ -92,7 +100,7 @@ export default class DayOneImporter extends Plugin {
 		new Notice(`Imported: ${successCount}, Skipped: ${skippedCount}, Failed: ${failedEntries.length}`);
 	}
 
-	async createNoteFromEntry(entry: any, folder: string, basePath: string, fileMap?: Map<string, File>): Promise<boolean> {
+	async createNoteFromEntry(entry: any, folder: string, _basePath: string, _fileMap?: Map<string, File>): Promise<boolean> {
 		// Generate filename
 		const filename = this.generateFilename(entry);
 		const filepath = `${folder}/${filename}.md`;
@@ -349,7 +357,7 @@ class DayOneImportModal extends Modal {
 		const folderLabel = folderContainer.createEl("label", { text: "Step 2: Select Media Folder" });
 		folderLabel.style.fontWeight = "bold";
 
-		const folderDesc = folderContainer.createEl("p", {
+		folderContainer.createEl("p", {
 			text: "We couldn't detect the file path (browser security). Please select your Day One export folder (the one containing 'photos', 'audio', etc.) so we can import your media.",
 			cls: "setting-item-description"
 		});
