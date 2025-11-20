@@ -102,7 +102,23 @@ npm run build
 
 MIT License - Free and Open Source Software (FOSS)
 
-## Privacy
+## Privacy & Security
 
-All processing happens locally in your Obsidian vault. No data is sent to external servers.
+**Nopalito Importer is designed to be 100% offline and secure.**
+
+-   **Offline Only:** The plugin makes **zero** network requests. It does not connect to the internet, does not call any APIs, and does not send any analytics data.
+-   **Local Processing:** All parsing and conversion happens locally on your machine within Obsidian.
+-   **Sensitive Data:** Your Day One journal (which may contain private thoughts and location data) is never exposed. The plugin simply reads the JSON file you select and writes Markdown files directly to your Obsidian vault.
+-   **No Runtime Dependencies:** The plugin has no external runtime dependencies. All necessary code is bundled into the plugin itself.
+
+## Dependencies
+
+This plugin has **0 runtime dependencies**. It relies solely on the Obsidian API and standard Node.js modules (`fs`, `path`) provided by the Obsidian environment.
+
+### Development Dependencies
+These are used only for building the plugin:
+-   `esbuild`: For bundling the code.
+-   `typescript`: For type safety.
+-   `obsidian`: Type definitions for the Obsidian API.
+
 
