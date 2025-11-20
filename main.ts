@@ -26,7 +26,7 @@ export default class DayOneImporter extends Plugin {
 	async onload() {
 		await this.loadSettings();
 
-		this.addRibbonIcon('import', 'Import Day One Journal (Platano)', () => {
+		this.addRibbonIcon('banana', 'Import Day One Journal (Platano)', () => {
 			this.startImport();
 		});
 
