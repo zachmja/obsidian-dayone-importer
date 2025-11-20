@@ -23,11 +23,11 @@ const installPlugin = (targetPath) => {
     }
 
     let installPath = resolve(cleanPath);
-    const pluginDirName = PLUGIN_ID;
+    const pluginDirName = PLUGIN_DIR_NAME;
 
     console.log(`Processing path: ${installPath}`);
 
-    // Heuristic 1: Is this the specific plugin folder already? (ends in platano-importer)
+    // Heuristic 1: Is this the specific plugin folder already? (ends in nopalito-importer)
     if (installPath.endsWith(pluginDirName)) {
         // Good to go
     }
@@ -84,7 +84,7 @@ if (targetDir) {
         output: process.stdout
     });
 
-    console.log("\n--- Platano Importer Installer ---");
+    console.log("\n--- Nopalito Importer Installer ---");
     console.log("Tip: You can drag and drop your folder here.");
     console.log("Please enter the path to your Obsidian Vault (or the plugins folder):");
 
