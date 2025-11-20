@@ -1,6 +1,6 @@
 {
-	"id": "platano-importer",
-	"name": "Platano Importer",
+	"id": "nopalito-importer",
+	"name": "Nopalito Importer",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
 	"description": "Import and convert Day One journal exports to Obsidian markdown files",

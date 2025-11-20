@@ -1,4 +1,4 @@
-# Platano Importer for Obsidian
+# Nopalito Importer for Obsidian
 
 Note: this was 100% vibe-coded.
 
@@ -27,15 +27,15 @@ npm run build
 npm run install-plugin
 ```
 
-The script will ask for your Obsidian vault's plugin directory (e.g., `/Users/you/Vault/.obsidian/plugins/platano-importer`) and copy the necessary files for you.
+The script will ask for your Obsidian vault's plugin directory (e.g., `/Users/you/Vault/.obsidian/plugins/nopalito-importer`) and copy the necessary files for you.
 
 ### Manual Install
 
 1. Download the latest release.
-2. Create a folder named `platano-importer` in your vault's `.obsidian/plugins/` directory.
+2. Create a folder named `nopalito-importer` in your vault's `.obsidian/plugins/` directory.
 3. Copy `main.js` and `manifest.json` into that folder.
 4. Reload Obsidian.
-5. Enable "Platano Importer" in Settings → Community Plugins.
+5. Enable "Nopalito Importer" in Settings → Community Plugins.
 
 ## Usage
 
@@ -44,12 +44,12 @@ The script will ask for your Obsidian vault's plugin directory (e.g., `/Users/yo
    - **Important:** Keep the `photos`, `audio`, and `video` folders in the same directory as your JSON file.
 
 2. **Import to Obsidian**
-   - Click the "Import Day One Journal (Platano)" icon in the ribbon.
+   - Click the "Import Day One Journal (Nopalito)" icon in the ribbon (🌱).
    - Select your `Journal.json` file from the export folder.
    - The plugin will import entries and copy media files to your vault.
 
 3. **Configure Settings**
-   - Go to Settings → Platano Importer Settings
+   - Go to Settings → Nopalito Importer Settings
    - Set import folder, filename format, and metadata options
 
 ## Settings

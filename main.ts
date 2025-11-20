@@ -26,7 +26,7 @@ export default class DayOneImporter extends Plugin {
 	async onload() {
 		await this.loadSettings();
 
-		this.addRibbonIcon('banana', 'Import Day One Journal (Platano)', () => {
+		this.addRibbonIcon('sprout', 'Import Day One Journal (Nopalito)', () => {
 			this.startImport();
 		});
 
@@ -432,7 +432,7 @@ class DayOneImporterSettingTab extends PluginSettingTab {
 		const { containerEl } = this;
 		containerEl.empty();
 
-		containerEl.createEl('h2', { text: 'Platano Importer Settings' });
+		containerEl.createEl('h2', { text: 'Nopalito Importer Settings' });
 
 		new Setting(containerEl)
 			.setName('Import folder')

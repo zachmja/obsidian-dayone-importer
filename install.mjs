@@ -2,7 +2,7 @@ import { copyFileSync, existsSync, mkdirSync, statSync } from "fs";
 import { resolve, join } from "path";
 import * as readline from "readline";
 
-const PLUGIN_ID = "platano-importer";
+const PLUGIN_DIR_NAME = 'nopalito-importer';
 
 const installPlugin = (targetPath) => {
     // Clean up the path: remove backslashes used for escaping spaces (common in terminal drag-and-drop)
